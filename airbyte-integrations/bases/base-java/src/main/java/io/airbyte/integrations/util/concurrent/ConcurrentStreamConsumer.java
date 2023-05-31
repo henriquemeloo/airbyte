@@ -84,10 +84,11 @@ public class ConcurrentStreamConsumer implements Consumer<AutoCloseableIterator<
   }
 
   /**
-   * Calculates the parallelism based on the requested parallelism. If the requested parallelism is greater than zero,
-   * the minimum value between the parallelism and the maximum parallelism is chosen as the parallelism count. Otherwise,
-   * the minimum parallelism is selected. This is to avoid issues with attempting to create an executor service with a thread
-   * pool size of 0, which is not allowed.
+   * Calculates the parallelism based on the requested parallelism. If the requested parallelism is
+   * greater than zero, the minimum value between the parallelism and the maximum parallelism is
+   * chosen as the parallelism count. Otherwise, the minimum parallelism is selected. This is to avoid
+   * issues with attempting to create an executor service with a thread pool size of 0, which is not
+   * allowed.
    *
    * @param requestedParallelism The requested parallelism.
    * @return The selected parallelism based on the factors outlined above.
